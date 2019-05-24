@@ -1,0 +1,309 @@
+        /*************************standard*************************/
+        
+        body {
+            /*    box-shadow: 1em 1em 1em darkgrey;*/
+        }
+        /*header*/
+        
+        #button {
+            position: absolute;
+            left: 3rem;
+            top: 3rem;
+            border: none;
+            margin: 0;
+            padding: 0;
+            width: 5rem;
+            height: 2rem;
+            background-color: #FFDD00;
+            transition: .3s;
+            border: 3px solid black;
+            border-radius: 2px;
+            font-family: "Nexa-Bold";
+        }
+        
+        #button:hover {
+            border: 5px solid black;
+        }
+        
+        #button.buttonclick {
+            background-color: white;
+            background: #D6637B;
+        }
+        /**************main**************/
+        
+        main {
+            display: flex;
+            height: 80vh;
+        }
+        /************marilyn*************/
+        
+        .marilyn {
+            /*    display: none;*/
+            opacity: 0;
+            width: 30%;
+            position: absolute;
+            right: 0;
+            /*    transition: 3s .5s;*/
+        }
+        
+        .marilyn2 {
+            opacity: 1;
+            width: 30%;
+            position: absolute;
+            right: 0;
+            transition: 3s 0s;
+        }
+        
+        .showMouth {
+            transform: translate(0vw, 20px);
+        }
+        
+        h2 {
+            opacity: 0;
+            font-size: 3em;
+            color: white;
+            font-family: "NexaRegular";
+            z-index: 2;
+        }
+        
+        .praten {
+            opacity: 1;
+        }
+        
+        ************************secondView************************ .changeColor {
+            background: #D6637B;
+        }
+        /*banana*/
+        
+        .bananaBox {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .banana {
+            width: 40%;
+            transition: 1s;
+            cursor: pointer;
+        }
+        
+        .movebanana {
+            margin-left: -40%;
+            transform: rotate(360deg) scaleX(-1);
+            margin-left: 10px;
+        }
+        
+        .movebanana #back {
+            display: none;
+        }
+        /*************************schillen***********************/
+        
+        .topLeftMove {
+            animation: schilLeft 1s forwards;
+        }
+        
+        @keyframes schilLeft {
+            0% {
+                transform: rotate(0);
+            }
+            50% {
+                transform: rotateX(5deg) rotateY(-25deg);
+            }
+            100% {
+                opacity: 0;
+                transform: rotateX(5deg) rotateY(-25deg);
+                transition: .1s .5s;
+            }
+        }
+        
+        .topRightMove {
+            animation: schilRight 1s forwards;
+        }
+        
+        @keyframes schilRight {
+            0% {
+                transform: rotate(0);
+            }
+            50% {
+                transform: rotateX(5deg) rotateY(25deg);
+            }
+            100% {
+                opacity: 0;
+                transform: rotateX(5deg) rotateY(25deg);
+                transition: .1s .5s;
+            }
+        }
+        
+        .underMove {
+            animation: schilUnder 1s forwards;
+        }
+        
+        @keyframes schilUnder {
+            0% {
+                transform: rotate(0);
+            }
+            50% {
+                transform: rotateX(35deg) rotateY(35deg);
+            }
+            100% {
+                opacity: 0;
+                transform: rotateX(35deg) rotateY(35deg);
+                transition: .1s .5s;
+            }
+        }
+        /*
+.shake {
+    animation: shake 1s alternate ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-2px);
+    }
+    40% {
+        transform: translateY(2px);
+    }
+    60% {
+        transform: translateY(-2px);
+    }
+    80% {
+        transform: translateY(2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+*/
+        /*
+.banana:hover > #schil-left {
+    transform: skew(.312rad);
+    transform-origin: bottom;
+}
+*/
+        /****************************footer****************************/
+        
+        .tekst {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 0px;
+        }
+        
+        h1 {
+            font-family: Coronet;
+            text-align: center;
+            font-size: 40px;
+            transition: cubic-bezier(.46, .47, .46, .47);
+        }
+        
+        h1 {
+            animation: easeIn 3s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes easeIn {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        /*************************************************************/
+        /*********************mediaqueries****************/
+        
+        @media (min-width: 1em) and (max-width: 25em) {
+            body {
+                background-color: white;
+            }
+            .changeColor {
+                background-color: #D6637B;
+            }
+            .banana {
+                width: 60%;
+                transition: 1s;
+                cursor: pointer;
+            }
+            main {
+                flex-direction: row;
+            }
+            /*
+            .movebanana {
+    transform: rotate(360deg) scaleX(-1);
+    margin-left: 10px;
+}
+*/
+            .marilyn2 {
+                opacity: 1;
+                width: 40%;
+                position: absolute;
+                right: 0;
+            }
+        }
+        
+        @media (min-width: 26em) and (max-width: 39em) {
+            body {
+                background-color: white;
+            }
+            .changeColor {
+                background-color: #D6637B;
+            }
+            .banana {
+                width: 40%;
+                transition: 1s;
+                cursor: pointer;
+            }
+            .marilyn2 {
+                opacity: 1;
+                width: 40%;
+                position: absolute;
+                right: 0;
+            }
+            main {
+                flex-direction: row;
+            }
+        }
+        
+        @media (min-width: 40em) and (max-width: 56em) {
+            body {
+                background-color: white;
+            }
+            .changeColor {
+                background-color: #D6637B;
+            }
+            .banana {
+                width: 40%;
+                transition: 1s;
+                cursor: pointer;
+            }
+            .marilyn2 {
+                opacity: 1;
+                width: 30%;
+                position: absolute;
+                right: 0;
+            }
+        }
+        
+        @media (min-width: 57em) {
+            body {
+                background-color: white;
+            }
+            .changeColor {
+                background-color: #D6637B;
+            }
+            .banana {
+                width: 40%;
+                transition: 1s;
+                cursor: pointer;
+            }
+            .marilyn2 {
+                opacity: 1;
+                width: 30%;
+                position: absolute;
+                right: 0;
+            }
+        }
